@@ -1,5 +1,5 @@
 var server = require('./app/server');  
-var repository = require('./app/repository');  
+var repository = require('./app/repo');  
 var config = require('./app/config');
 
 
