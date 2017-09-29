@@ -14,7 +14,7 @@ module.exports = (app, options) => {
     .catch(next);
   });
 
-  app.get('/search', (req, res) => {
+  app.get('/search', (req, res,next) => {
 
     //  Get the email.
     var email = req.query.email;
@@ -24,7 +24,7 @@ module.exports = (app, options) => {
 
     //  Get the user from the repo.
     options.repository.getUserByEmail(email).then((user) => {
-
+console.log ("er e ia m,");
       if(!user) { 
         res.status(404).send('User not found.');
       } else {

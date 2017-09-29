@@ -35,13 +35,13 @@ this.connection.query('SELECT email, phone_number FROM directory', (err, results
     
             console.log(results);
             console.log(results.length);
-            
+
             if(err) {
-              return reject(new Error("An error occured getting the user: " + err));
-            }
+               reject(new Error("An error occured getting the user: " + err));
+                      }
     
             if(results.length === 0) {
-              resolve(undefined);
+              resolve("nothing");
             } else {
               resolve({
                 email: results[0].email,
