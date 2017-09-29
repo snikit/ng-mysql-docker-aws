@@ -34,6 +34,8 @@ this.connection.query('SELECT email, phone_number FROM directory', (err, results
     
           this.connection.query('SELECT email, phone_number FROM directory WHERE email = ?', [email], (err, results) => {
     
+            console.log(results);
+
             if(err) {
               return reject(new Error("An error occured getting the user: " + err));
             }
