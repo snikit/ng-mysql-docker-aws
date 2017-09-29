@@ -5,6 +5,6 @@ module.exports = {
     database: 'users',
     user: 'local',
     password: 'local',
-    port: 3306
+    port: 3000
   }
 };
